@@ -19,6 +19,7 @@ public class CustomerOrder {
     private Customer customer;
 
     /*@OneToMany(mappedBy = "customerOrder", fetch = FetchType.EAGER, cascade = CascadeType.ALL)*/
+    //used fetch eager so that you are able to fetch the orderDetails from de customerDao
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<OrderDetail> orderDetails = new ArrayList<>();
 
